@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+}
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The moving row of images */
+.carousel-track {
+    display: flex;
+    width: 600%;
+    height: 100%;
+
+    animation: carousel-animation 120s infinite alternate ease-in-out;
+}
+
+/* Individual images */
+.carousel-slide {
+    flex: 0 0 16.666666%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Darkens the images so the white box is easier to read */
+    filter: brightness(0.6);
+}
+
+/* White box in the middle of the page */
+.overlay {
+    position: absolute;
+    z-index: 10;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(80%, 500px);
+    padding: 35px 50px;
+
+    background-color: white;
+    color: #111;
+
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Main heading */
+.overlay h1 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+/* Paragraph inside the white box */
+.overlay p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
+}
+
+/* Carousel animation */
+@keyframes carousel-animation {
+    0%,
+    12% {
+        transform: translateX(0);
+    }
+
+    20%,
+    32% {
+        transform: translateX(-16.666666%);
+    }
+
+    40%,
+    52% {
+        transform: translateX(-33.333333%);
+    }
+
+    60%,
+    72% {
+        transform: translateX(-50%);
+    }
+
+    80%,
+    92% {
+        transform: translateX(-66.666666%);
+    }
+
+    100% {
+        transform: translateX(-83.333333%);
+    }
+}

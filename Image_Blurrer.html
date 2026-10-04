@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Blurrer</title>
     <link rel="stylesheet" href="Image_Blurrer.css">
-<title>Image Blurrer</title>
 </head>
 <body>
-    <!--<h1 style="color:rgb(0, 0, 0);">Image Blurrer</h1>-->
-    <!--<p>Upload an image to apply a blur effect.</p>-->
-    <!--<input type="file" id="imageUpload" accept="image/*">-->
-    <!--<br>-->
-    <!--<canvas id="imageCanvas"></canvas>-->
-    <!--<br>-->
-    <!--<label for="blurAmount">Blur Amount:</label>
-    <input type="range" id="blurAmount" min="0" max="20" value="5">
-    <span id="blurValue">5</span>-->
-    <!--<script src="Image_Blurrer.js"></script>-->  
-    
-    <main class="carousel">
-        <div class="carousel-slide">Item 1
-            <img src="images/images (1).jpg" alt="Item 1">
+
+    <main class="carousel" aria-label="Image carousel">
+
+        <!-- White text box -->
+        <div class="overlay">
+            <h1>Image Blurrer</h1>
+            <p>Upload an image to apply a blur effect.</p>
+            <input type="file" id="imageUpload" accept="image/*">
+            <canvas id="imageCanvas" width="500" height="25"></canvas>
+            <label for="blurAmount">Blur Amount:</label>
+            <br>
+            <input type="range" id="blurAmount" min="0" max="20" value="5">
+            <span id="blurValue">5</span>
         </div>
-        <div class="carousel-slide">Item 1
-            <img src="images/business-meeting_Z1ZIMB54UM.jpg" alt="Item 2">
+
+        <!-- Image carousel -->
+        <div class="carousel-track">
+
+            <div
+                class="carousel-slide"
+                style="background-image: url('images/images (1).jpg');"
+                aria-label="Item 1">
+            </div>
+
+            <div
+                class="carousel-slide"
+                style="background-image: url('images/business-meeting_Z1ZIMB54UM.jpg');"
+                aria-label="Item 2">
+            </div>
+
+            <div
+                class="carousel-slide"
+                style="background-image: url('images/city-port_K5CXXZEVUX.webp');"
+                aria-label="Item 3">
+            </div>
+
+            <div
+                class="carousel-slide"
+                style="background-image: url('images/people-back_Q71CIRI83F.jpg');"
+                aria-label="Item 4">
+            </div>
+
+            <div
+                class="carousel-slide"
+                style="background-image: url('images/people-tourists_0XAACTIEKS.jpg');"
+                aria-label="Item 5">
+            </div>
+
+            <div
+                class="carousel-slide"
+                style="background-image: url('images/sea-natural_EMYSEYJNCE.jpg');"
+                aria-label="Item 6">
+            </div>
+
         </div>
-        <div class="carousel-slide">Item 1
-            <img src="images/city-port_K5CXXZEVUX.webp" alt="Item 3">
-        </div>
-        <div class="carousel-slide">Item 1
-            <img src="images/people-back_Q71CIRI83F.jpg" alt="Item 4">
-        </div>
-        <div class="carousel-slide">Item 1
-            <img src="images/people-tourists_0XAACTIEKS.jpg" alt="Item 5">
-        </div>
-        <div class="carousel-slide">Item 1
-            <img src="images/sea-natural_EMYSEYJNCE.jpg" alt="Item 6">
-        </div>
-       
     </main>
-    
+
 </body>
 </html>
-
